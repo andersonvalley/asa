@@ -817,6 +817,10 @@ a:hover {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .cart {
   margin-left: 61px;
   cursor: pointer;
