@@ -1,0 +1,49 @@
+.cart {
+  margin-left: 61px;
+  cursor: pointer;
+
+  @include _990 {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 20;
+
+    .cart__price {
+      font-size: 0;
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-right: 8px;
+  }
+
+  &__count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    background-color: $pink;
+    border-radius: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 10px;
+  }
+
+  &:hover {
+    svg path {
+      fill: $pink;
+      transition: all 200ms ease-in-out;
+    }
+
+    .cart__price {
+      color: $pink;
+      transition: all 200ms ease-in-out;
+    }
+  }
+}

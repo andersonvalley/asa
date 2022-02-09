@@ -1,0 +1,64 @@
+.mobile-menu {
+  display: none;
+
+  @include _690 {
+    display: flex;
+    width: 100%;
+    margin-top: -28px;
+  }
+
+  .menu {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .menu__item {
+    background: #f2f1f3;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding: 12px;
+
+    .menu__icon {
+      margin-left: 3px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: $pink;
+      color: #fff;
+
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+
+  .menu__show {
+    .btn-show {
+      width: 100%;
+      padding: 12px 0;
+      border: 1px solid #e6e4e7;
+      transition: all 200ms ease-in-out;
+      svg {
+        margin-left: 5px;
+      }
+
+      &:hover {
+        background-color: $pink;
+        color: #fff;
+
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .menu__arrow {
+    display: none;
+  }
+
+  .menu__item-hidden {
+    display: none;
+  }
+}

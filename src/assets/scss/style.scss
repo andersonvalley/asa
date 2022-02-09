@@ -1,0 +1,152 @@
+@import 'common/normalize';
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/settings';
+
+@import 'components/header';
+@import 'components/sidebar-menu';
+@import 'components/menu';
+@import 'components/mobile-menu';
+@import 'components/cart';
+@import 'components/products';
+@import 'components/footer';
+
+.content {
+  margin-left: $widthSidebar;
+  width: calc(100% - $widthSidebar);
+
+  @include _990 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.main {
+  padding: 0 40px;
+
+  @include _990 {
+    padding: 0 15px;
+  }
+}
+
+.phone {
+  &:hover,
+  &:active {
+    a {
+      color: $pink;
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  img {
+    display: none;
+
+    @include _990 {
+      display: inline;
+    }
+  }
+
+  @include _990 {
+    position: fixed;
+    right: 85px;
+    top: 10px;
+
+    a {
+      font-size: 0;
+    }
+  }
+}
+
+.search {
+  &__form {
+    display: flex;
+  }
+  &__input {
+    border: 1px solid #e6e4e7;
+    box-sizing: border-box;
+    border-radius: 8px 0 0 8px;
+    padding: 8px 16px;
+    width: 100%;
+    color: $grayText;
+    outline: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      border-color: $pink;
+    }
+
+    &:active,
+    &:focus {
+      color: #1a1a1a;
+    }
+  }
+
+  &__btn {
+    background-color: $pink;
+    border-radius: 0px 8px 8px 0px;
+    position: relative;
+    left: -1px;
+    width: 50px;
+  }
+
+  @include _990 {
+    margin-top: -30px;
+
+    &__input {
+      padding: 12px 16px;
+    }
+  }
+}
+
+.user {
+  margin-left: 24px;
+  cursor: pointer;
+
+  span {
+    margin-left: 4px;
+  }
+
+  &:hover span {
+    color: $pink;
+    transition: all 200ms ease-in-out;
+  }
+
+  @include _990 {
+    position: fixed;
+    top: 15px;
+    right: 48px;
+    z-index: 10;
+
+    span {
+      font-size: 0;
+    }
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  @include _990 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+.social {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.accepted {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+}

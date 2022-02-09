@@ -1,0 +1,70 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-family: 'Helvetica', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.btn {
+  border: 1px solid #1a1a1a;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
